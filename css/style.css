@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    /* background-image: url('../img/texture.png'); */
+   /*background-image: url('../img/bg.jpg');
+   background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+    background-color: #111111;
+    color: #fff;
+   */
+    /*background-color: rgba(255, 159, 47, 0.47);*/
+    background: linear-gradient(#1cbcb4, rgba(28, 188, 180, 0.34));
+
+    background-attachment: fixed;
+
+    font-family:'Bellefair', serif;
+}
+#main_content{
+    /* width: 100%; */
+    /* min-width: 800px; */
+    /* max-width: 1200px; */
+    width: 1200px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+
+}
+#right_bar{
+    /* background-image: url('../img/texture2.png'); */
+    /*background-image: url('../img/bg-blur.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75% 100%;
+    background-attachment: fixed;*/
+   /* border: 1px dashed rgba(200, 200, 200, .5);*/
+
+    background-color: #ffffff;
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+
+    margin: 1% 1% 1% 0.5%;
+}
+
+#left_bar{
+   /* border-left: 1px dashed #C5CCDA;*/
+    width: 340px;
+   /* background-position: 50% 100%;
+    background-attachment: fixed;*/
+   /* border: 1px dashed rgba(145, 24, 126, 0.5);*/
+    margin: 1% 0.5% 1% 1%;
+    background-color: #ffffff;
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*
+ Time
+*/
+.clock {
+    border-radius: 50%;
+    background: #fff url(../images/horloge/ios_clock.svg) no-repeat center;
+    background-size: 88%;
+    height: 20em;
+    padding-bottom: 31%;
+    position: relative;
+    width: 20em;
+}
+
+.clock.simple:after {
+    background: #000;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 5%;
+    height: 5%;
+    z-index: 10;
+}
+.minutes-container, .hours-container, .seconds-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.hours {
+    background: #000;
+    height: 20%;
+    left: 48.75%;
+    position: absolute;
+    top: 30%;
+    transform-origin: 50% 100%;
+    width: 2.5%;
+}
+.minutes {
+    background: #000;
+    height: 40%;
+    left: 49%;
+    position: absolute;
+    top: 10%;
+    transform-origin: 50% 100%;
+    width: 2%;
+}
+.seconds {
+    background: #000;
+    height: 45%;
+    left: 49.5%;
+    position: absolute;
+    top: 14%;
+    transform-origin: 50% 80%;
+    width: 1%;
+    z-index: 8;
+}
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+.hours-container {
+    animation: rotate 43200s infinite linear;
+}
+.minutes-container {
+    animation: rotate 3600s infinite linear;
+}
+.seconds-container {
+    animation: rotate 60s infinite linear;
+}
+.minutes-container {
+    animation: rotate 3600s infinite steps(60);
+}
+.seconds-container {
+    animation: rotate 60s infinite steps(60);
+}
